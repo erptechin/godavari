@@ -1322,6 +1322,10 @@ button:hover {
     display: block;
 }
 
+.md\:hidden {
+    display: none;
+}
+
 @media (min-width: 768px) {
 
     .main-container {
@@ -1444,5 +1448,51 @@ button:hover {
 
     .text-5xl {
         font-size: 20px;
+    }
+
+    .md\:hidden {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background: #fff;
+        padding: 10px;
+    }
+
+    #mobile-menu a {
+        display: block;
+        margin: 5px 0 !important;
+    }
+
+    #mobile-menu button,
+    #mobile-menu .group {
+        margin: 0 !important;
+        position: relative !important;
+    }
+
+    #mobile-menu .group a {
+        display: inline-block;
+    }
+
+    #mobile-menu .group svg {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    #mobile-menu .submenu {
+        position: relative !important;
+        box-shadow: inherit;
+        width: auto;
+    }
+
+    #mobile-menu .submenu a {
+        display: block;
     }
 }

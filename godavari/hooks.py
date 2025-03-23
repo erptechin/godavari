@@ -243,6 +243,5 @@ app_license = "mit"
 # }
 
 website_route_rules = [
-    {"from_route": "/", "to_route": "main"},
     {"from_route": "/services/<service_url>", "to_route": "service"},
 ]

@@ -50,11 +50,22 @@
 
     <header class="relative w-full px-6 md:px-12 lg:px-40 py-4 flex justify-between items-center z-10">
         <div class="logo w-[200px] h-[40px]">
-            <a href="/main"><img src="/assets/images/logo.png" alt="" /></a>
+            <a href="/home"><img src="/assets/images/logo.png" alt="" /></a>
         </div>
 
-        <nav class="hidden lg:flex items-center space-x-8">
-            <a href="/main" class="text-dark font-semibold hover:text-primary">Home</a>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+                MENU
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="hidden lg:flex items-center space-x-8">
+            <a href="/home" class="text-dark font-semibold hover:text-primary">Home</a>
             <a href="/about-us" class="text-dark font-semibold hover:text-primary">About Us</a>
             <div class="relative group">
                 <a href="/services" class="text-dark hover:text-primary font-semibold flex items-center">
@@ -64,6 +75,10 @@
                             stroke-linejoin="round" />
                     </svg>
                 </a>
+                <svg class="w-3 h-3 ml-1 md:hidden" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
                 <div class="absolute hidden group-hover:block bg-white shadow-lg submenu">
                     {%- for row in services -%}
                     <a class="hover:text-primary" href="/services/{{ row.url }}">{{ row.title }}</a>
@@ -89,7 +104,7 @@
             <div class="px-6 md:px-12 lg:px-40 flex flex-col md:flex-row justify-between">
                 <div class="mb-8 md:mb-0 md:w-1/2">
                     <div class="w-[212px] h-[51px] mb-6">
-                        <a href="/main"><img src="/assets/images/logo.png" alt="" /></a>
+                        <a href="/home"><img src="/assets/images/logo.png" alt="" /></a>
                     </div>
                     <p class="text-textGray mb-8 max-w-lg">
                         At Godavari Logistics, we are committed to transforming logistics with reliability and
@@ -133,6 +148,13 @@
 
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="/assets/js/main.js" type="module" crossorigin></script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 
