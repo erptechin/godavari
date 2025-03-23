@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "title",
+  "url",
   "description",
   "image"
  ],
@@ -29,11 +30,20 @@
    "fieldtype": "Text Editor",
    "label": "Description",
    "reqd": 1
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Url",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-23 22:07:06.925053",
+ "modified": "2025-03-23 23:05:30.938220",
  "modified_by": "Administrator",
  "module": "godavari",
  "name": "Services",

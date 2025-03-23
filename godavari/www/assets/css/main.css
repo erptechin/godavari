@@ -1172,13 +1172,6 @@ button:hover {
     opacity: .9
 }
 
-@media (max-width: 768px) {
-    .main-container {
-        width: 100%;
-        overflow-x: hidden
-    }
-}
-
 .text-base {
     font-size: .8rem;
     line-height: 1.5rem
@@ -1316,7 +1309,26 @@ button:hover {
     width: 90%;
 }
 
+.group:hover .group-hover\:block {
+    display: block;
+}
+
+.submenu {
+    width: 220px;
+    padding: 10px;
+}
+
+.submenu a {
+    display: block;
+}
+
 @media (min-width: 768px) {
+
+    .main-container {
+        width: 100%;
+        overflow-x: hidden
+    }
+
     .md\:mb-0 {
         margin-bottom: 0
     }
@@ -1341,6 +1353,11 @@ button:hover {
         padding-left: 3rem;
         padding-right: 3rem
     }
+
+    .w-40 {
+        width: 40%;
+    }
+
 }
 
 @media (min-width: 1024px) {
@@ -1376,5 +1393,56 @@ button:hover {
     .lg\:px-60 {
         padding-left: 15rem;
         padding-right: 15rem
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .page-banner {
+        height: 200px !important;
+    }
+
+    .left-\[238px\] {
+        left: 10%;
+    }
+
+    .bg-home .left-\[238px\] {
+        left: 15%;
+    }
+
+    .bg-home .mt-6 {
+        margin-top: 0.5rem;
+    }
+
+    .w-\[458px\] {
+        width: 100%;
+    }
+
+    .top-\[156px\] {
+        top: 40%;
+    }
+
+    .top-\[256px\] {
+        top: 10%;
+    }
+
+    .sm\:flex {
+        display: block;
+    }
+
+    .sm\:px-2 {
+        padding: 5px 0;
+        margin: 0 !important;
+    }
+
+    .sm\:mx-5 {
+        margin: 15px 0;
+    }
+
+    .sm\:flex img {
+        margin: 0 !important;
+    }
+
+    .text-5xl {
+        font-size: 20px;
     }
 }
