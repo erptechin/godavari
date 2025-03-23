@@ -1,0 +1,139 @@
+{% extends "templates/layout.html" %}
+
+{% block title %}
+Godavari Logistics - Your Growth Partner
+{% endblock %}
+
+{% block meta_block %}
+<meta name="keywords" content="Godavari Logistics - keywords" />
+<meta name="description" content="Godavari Logistics - description" />
+<meta name="author" content="erptech.in" />
+{% endblock %}
+
+{% block page_content %} {{ _("") }}
+
+<!-- Hero Banner Section -->
+<section class="relative w-full h-[400px] bg-services bg-center bg-no-repeat bg-cover">
+
+    <!-- Hero Content -->
+    <div class="absolute top-[156px] left-[238px] w-[656px]">
+        <h1 class="text-3xl font-manrope font-extrabold leading-tight tracking-tight">
+            <span class="text-white">Warehousing</span> <span class="text-primary">and Storage</span>
+        </h1>
+    </div>
+
+</section>
+
+<!-- Services Section -->
+<section class="bg-light py-10">
+    <p class="text-lg text-center max-w-3xl mx-auto mb-12">Efficient and secure storage is the foundation of
+        logistics operations. Our advanced warehousing solutions are designed
+        to accommodate a wide range of business needs with precision and care.</p>
+    <h2 class="text-4xl font-manrope font-bold text-center mb-4">Key Features</h2>
+
+    <div class="px-6 md:px-12 lg:px-40">
+
+        {%- for row in services -%}
+        <div class="flex items-start space-x-3 bg-white mt-5 p-4">
+            <img class="mx-auto" src="{{ row.image }}" alt="" />
+            <div>
+                <h3 class="text-primary text-[20px] font-archivo font-medium mb-4">{{ row.title }}</h3>
+                <p class="text-textGray pb-3">{{ row.description }}</p>
+                <p class="text-textGray">CCTV cameras are strategically placed throughout the warehouse,
+                    covering both interior and exterior areas. These cameras are monitored 24/7 to detect any
+                    unusual activity and provide real-time evidence in case of a security breach. Motion sensors
+                    and alarms are installed to alert security teams to any unauthorized movement or breach of
+                    designated zones. Reinforced walls, gates, and fences are often used around the perimeter of
+                    the warehouse to deter intruders.</p>
+            </div>
+        </div>
+        {%- endfor -%}
+
+    </div>
+
+</section>
+
+<!-- Testimonials Section -->
+<section class="px-6 md:px-12 lg:px-40 py-10">
+    <div class="text-center mb-12">
+        <span class="text-primary text-xl font-manrope font-semibold">Customer Testimonial</span>
+        <h2 class="text-4xl font-manrope font-bold mt-4">Our Partner & Customer Give <br>The Best Review For Us
+        </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-light border-t-4 border-primary p-6">
+            <div class="flex mb-5">
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+            </div>
+
+            <p class="text-textGray mb-5">Lorem ipsum dolor sit amet consectetur. Pretium malesuada pulvinar sed
+                feugiat sem est nisl pharetra. Facilisis ridiculus amet commodo aliquet a phasellus malesuada.
+                Ac id quam mattis neque. Urna tellus ut maecenas interdum. Euismod egestas scelerisque.</p>
+
+            <div class="flex items-center">
+                <div class="w-[60px] h-[60px] rounded-full overflow-hidden mr-4"><img class="mx-auto"
+                        src="/assets/images/cus1.png" alt="" /></div>
+                <div>
+                    <h4 class="text-2xl font-manrope font-bold text-textGray">Michael Adam</h4>
+                    <p class="text-textGray">Hotel Manager</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-light border-t-4 border-primary p-6">
+            <div class="flex mb-5">
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+            </div>
+
+            <p class="text-textGray mb-5">Lorem ipsum dolor sit amet consectetur. Pretium malesuada pulvinar sed
+                feugiat sem est nisl pharetra. Facilisis ridiculus amet commodo aliquet a phasellus malesuada.
+                Ac id quam mattis neque. Urna tellus ut maecenas interdum. Euismod egestas scelerisque.</p>
+
+            <div class="flex items-center">
+                <div class="w-[60px] h-[60px] rounded-full overflow-hidden mr-4"><img class="mx-auto"
+                        src="/assets/images/cus2.png" alt="" /></div>
+                <div>
+                    <h4 class="text-2xl font-manrope font-bold text-textGray">Wade Warren</h4>
+                    <p class="text-textGray">Marketing Coordinator</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-light border-t-4 border-primary p-6">
+            <div class="flex mb-5">
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+            </div>
+
+            <p class="text-textGray mb-5">Lorem ipsum dolor sit amet consectetur. Pretium malesuada pulvinar sed
+                feugiat sem est nisl pharetra. Facilisis ridiculus amet commodo aliquet a phasellus malesuada.
+                Ac id quam mattis neque. Urna tellus ut maecenas interdum. Euismod egestas scelerisque.</p>
+
+            <div class="flex items-center">
+                <div class="w-[60px] h-[60px] rounded-full overflow-hidden mr-4"><img class="mx-auto"
+                        src="/assets/images/cus3.png" alt="" /></div>
+                <div>
+                    <h4 class="text-2xl font-manrope font-bold text-textGray">Albert Flores</h4>
+                    <p class="text-textGray">President of Sales</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

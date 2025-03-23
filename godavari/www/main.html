@@ -1,0 +1,455 @@
+{% extends "templates/layout.html" %}
+
+{% block title %}
+Godavari Logistics - Your Growth Partner
+{% endblock %}
+
+{% block meta_block %}
+<meta name="keywords" content="Godavari Logistics - keywords" />
+<meta name="description" content="Godavari Logistics - description" />
+<meta name="author" content="erptech.in" />
+{% endblock %}
+
+{% block page_content %} {{ _("") }}
+<!-- Hero Banner Section -->
+<section class="relative w-full h-[700px] bg-home bg-center bg-no-repeat bg-cover">
+
+    <!-- Hero Content -->
+    <div class="absolute top-[256px] left-[238px] w-[656px]">
+        <h1 class="text-5xl font-manrope font-extrabold leading-tight tracking-tight">
+            <span class="text-primary">Logistics</span>
+            <span class="text-white"> for a Rising India</span>
+        </h1>
+        <p class="text-white text-xl mt-6 leading-relaxed">
+            We are your Tech-enabled partner for storage & movement<br>
+            of goods across India and Globe.
+        </p>
+        <button class="mt-2 bg-primary text-white font-bold py-3.5 px-8 rounded font-archivo">Schedule a
+            Call</button>
+    </div>
+
+    <!-- Quote Form -->
+    <div id="toggleDiv" class="absolute top-2.5 left-0 w-[458px] h-[682px] bg-white rounded-md shadow-lg">
+        <div class="p-6 pt-8">
+            <h2 class="text-center text-2xl font-bold font-manrope mb-4">Request a Quote</h2>
+
+            
+            <form id="inquiry_form" class="space-y-2">
+                <label>I am looking for </label>
+                <div>
+                    <div class="relative">
+                        <select
+                            class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray appearance-none">
+                            <option>Find a solution</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="text" placeholder="First name" name="first_name" id="first_name"
+                    class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray" />
+                <input type="text" placeholder="Last name" name="last_name" id="last_name"
+                    class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray" />
+                <input type="email" placeholder="Email" name="email" id="email"
+                    class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray" />
+                <input type="tel" placeholder="Phone number" name="phone_number" id="phone_number"
+                    class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray" />
+
+                <!-- <div class="relative">
+                    <select
+                        class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray appearance-none">
+                        <option>Subject</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div> -->
+
+                <div class="relative">
+                    <textarea placeholder="Message" name="message" id="message"
+                        class="w-full h-[153px] p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray"></textarea>
+                </div>
+
+                <button type="submit" class="ml-auto block bg-primary text-white font-bold py-3.5 px-8 rounded">Send
+                    Request</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Side Quote Button -->
+    <div id="toggleForm"
+        class="absolute bottom-[0px] left-0 w-[115px] h-[48px] bg-primary -rotate-90 origin-top-left rounded cursor-pointer">
+        <div class="absolute top-0 left-[105px] w-[34px] h-[48px] bg-secondary rounded-r-md">
+            <div id="toggleImage"
+                class="rotate-90 w-[21px] h-[21px] mx-auto mt-3 bg-quote-arrow bg-center bg-no-repeat bg-cover">
+            </div>
+        </div>
+        <span class="absolute top-0 left-0 text-white font-bold pl-5 pt-3">Get Quote</span>
+    </div>
+
+</section>
+
+<!-- About Section -->
+<section class="px-6 md:px-12 lg:px-40 py-10">
+    <div class="flex flex-col lg:flex-row gap-16 items-center">
+        <div class="flex-1">
+            <h2 class="font-manrope text-4xl mb-6">
+                <span class="text-primary font-normal">Godavari</span>
+                <span class="text-secondary font-normal"> Warehousing</span><br>
+                <span class="text-dark font-bold">Your Growth Partner</span>
+            </h2>
+            <p class="text-textGray leading-relaxed">
+                At Godavari Logistics, we are committed to transforming logistics with reliability and
+                precision. As a trusted 3PL provider in India, we offer comprehensive supply chain solutions
+                tailored to businesses of all sizes. From warehousing and inventory control to transportation
+                and distribution.
+                <br><br>
+                By focusing on innovation, efficiency, and customer satisfaction, we ensure your products move
+                seamlessly, regardless of distance or complexity. Our expert team leverages cutting-edge
+                technology and industry best practices to deliver unmatched performance. With a deep
+                understanding.
+            </p>
+        </div>
+        <div class="w-full lg:w-[450px] h-[309px] overflow-hidden">
+            <img src="/assets/images/godavari-warehousing.png" />
+        </div>
+    </div>
+
+    <button class="mt-6 bg-primary text-white font-bold py-3.5 px-8 rounded">Get Quote</button>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="bg-light py-10">
+    <div class="px-6 md:px-12 lg:px-40">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <div class="rounded-md p-6">
+                <h2 class="text-2xl font-manrope font-bold mb-4">Why Choose us?</h2>
+                <p class="text-textGray">With a commitment to excellence and a customer-first
+                    approach, we provide reliable, scalable, and innovative logistics solutions. Our seamless
+                    services ensure that your business stays connected, efficient, and on track to succeed.</p>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="bg-white hover:bg-primary rounded-md p-6 text-center group transition-colors duration-300">
+                <div
+                    class="w-[55px] h-[55px] mx-auto mb-6 bg-logistics bg-center bg-no-repeat bg-contain">
+                </div>
+                <h3 class="text-primary text-xl font-archivo font-medium pb-2 group-hover:text-white">End-to-End
+                    Logistics Solutions
+                </h3>
+                <p class="text-textGray group-hover:text-white">We provide comprehensive logistics services,
+                    from warehousing and inventory management to last-mile delivery, ensuring a seamless
+                    experience throughout the supply chain.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white hover:bg-primary rounded-md p-6 text-center group transition-colors duration-300">
+                <div
+                    class="w-[79px] h-[79px] mx-auto mb-6 bg-reliability bg-center bg-no-repeat bg-contain">
+                </div>
+                <h3 class="text-primary text-xl font-archivo font-medium pb-2 group-hover:text-white">
+                    Reliability and
+                    Timeliness</h3>
+                <p class="text-textGray group-hover:text-white">With our robust network and advanced technology,
+                    we guarantee on-time
+                    deliveries, ensuring your business runs smoothly and customers stay satisfied.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white hover:bg-primary rounded-md p-6 text-center group transition-colors duration-300">
+                <div
+                    class="w-[88px] h-[87px] mx-auto mb-6 bg-scalable bg-center bg-no-repeat bg-contain">
+                </div>
+                <h3 class="text-primary text-xl font-archivo font-medium pb-2 group-hover:text-white">Scalable
+                    and
+                    Flexible
+                    <br>Services
+                </h3>
+                <p class="text-textGray group-hover:text-white">Whether you're a small startup or a large
+                    enterprise, our solutions are
+                    scalable to meet your evolving needs, offering cost-effective and tailored logistics options
+                    for every stage of your business growth</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Industries Section -->
+<section class="px-6 md:px-12 lg:px-40 py-10">
+    <h2 class="text-4xl font-manrope font-bold text-center mb-12">Industries We Serve</h2>
+
+    <div class="flex justify-center mb-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-center text-center">
+            <div>
+                <img class="mx-auto" src="/assets/images/fashion.png" alt="" />
+                <h3 class="text-[15px] font-manrope font-medium mt-3">Fashion</h3>
+            </div>
+            <div>
+                <img class="mx-auto" src="/assets/images/cosmetics.png" alt="" />
+                <h3 class="text-[15px] font-manrope font-medium mt-3">Cosmetics</h3>
+            </div>
+            <div>
+                <img class="mx-auto" src="/assets/images/pharmaceuticals.png" alt="" />
+                <h3 class="text-[15px] font-manrope font-medium mt-3">Pharmaceuticals</h3>
+            </div>
+            <div>
+                <img class="mx-auto" src="/assets/images/paints.png" alt="" />
+                <h3 class="text-[15px] font-manrope font-medium mt-3">Paints</h3>
+            </div>
+            <div>
+                <img class="mx-auto" src="/assets/images/chemicals.png" alt="" />
+                <h3 class="text-[15px] font-manrope font-medium mt-3">Chemicals</h3>
+            </div>
+            <div>
+                <img class="mx-auto" src="/assets/images/industrial.png" alt="" />
+                <h3 class="text-[15px] font-manrope font-medium mt-3">Industrial Construction</h3>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="bg-light py-10">
+    <h2 class="text-4xl font-manrope font-bold text-center mb-4">Our Services</h2>
+    <p class="text-lg text-center max-w-3xl mx-auto mb-12">
+        With a commitment to excellence and a customer-first approach, we provide reliable, scalable, and
+        innovative logistics solutions. Our seamless services ensure that your business stays connected,
+        efficient, and on track to succeed.
+    </p>
+
+    <div class="px-6 md:px-12 lg:px-40 py-10">
+        <!-- First Row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <!-- Service Card 1 -->
+            <div class="relative bg-white rounded-md overflow-hidden">
+                <div class="absolute left-0 top-0 bg-services-h bg-center bg-cover rounded-t-md"></div>
+                <img class="mx-auto h-[200px]" src="/assets/images/warehousing.png" alt="" />
+                <div class="p-6 relative">
+                    <h3 class="text-white text-[20px] font-archivo font-medium mb-4 -mt-14">Warehousing and
+                        Storage</h3>
+                    <p class="text-textGray">Efficient and secure storage is the foundation of logistics
+                        operations. Our advanced warehousing solutions are designed to accommodate a wide range
+                        of business needs with precision and care.</p>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="relative bg-white rounded-md overflow-hidden">
+                <div class="absolute left-0 top-0 bg-services-h bg-center bg-cover rounded-t-md"></div>
+                <img class="mx-auto h-[200px]" src="/assets/images/warehousing.png" alt="" />
+                <div class="p-6 relative">
+                    <h3 class="text-white text-[20px] font-archivo font-medium mb-4 -mt-14">Transportation and
+                        Distribution</h3>
+                    <p class="text-textGray">Seamless transportation and efficient distribution are essential to
+                        meeting customer demands and ensuring a smooth supply chain flow.</p>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="relative bg-white rounded-md overflow-hidden">
+                <div class="absolute left-0 top-0  bg-services-h bg-center bg-cover rounded-t-md"></div>
+                <img class="mx-auto h-[200px]" src="/assets/images/warehousing.png" alt="" />
+                <div class="p-6 relative">
+                    <h3 class="text-white text-[20px] font-archivo font-medium mb-4 -mt-14">E-Commerce
+                        Fulfillment
+                    </h3>
+                    <p class="text-textGray">Our tailored e-commerce fulfillment services help online businesses
+                        streamline operations and enhance customer satisfaction.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Service Card 4 -->
+            <div class="relative bg-white rounded-md overflow-hidden">
+                <div class="absolute left-0 top-0  bg-services-h bg-center bg-cover rounded-t-md"></div>
+                <img class="mx-auto h-[200px]" src="/assets/images/warehousing.png" alt="" />
+                <div class="p-6 relative">
+                    <h3 class="text-white text-[20px] font-archivo font-medium mb-4 -mt-14">Supply Chain Management</h3>
+                    <p class="text-textGray">Our end-to-end supply chain solutions simplify complex operations,
+                        ensuring smooth and efficient delivery from production to the final destination.</p>
+                </div>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div class="relative bg-white rounded-md overflow-hidden">
+                <div class="absolute left-0 top-0  bg-services-h bg-center bg-cover rounded-t-md"></div>
+                <img class="mx-auto h-[200px]" src="/assets/images/warehousing.png" alt="" />
+                <div class="p-6 relative">
+                    <h3 class="text-white text-[20px] font-archivo font-medium mb-4 -mt-14">Freight Forwarding
+                    </h3>
+                    <p class="text-textGray">Simplify your international shipping with our reliable freight
+                        forwarding services, designed to handle the complexities of global logistics.</p>
+                </div>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div class="relative bg-white rounded-md overflow-hidden">
+                <div class="absolute left-0 top-0 bg-services-h bg-center bg-cover rounded-t-md">
+                </div>
+                <img class="mx-auto h-[200px]" src="/assets/images/warehousing.png" alt="" />
+                <div class="p-6 relative">
+                    <h3 class="text-white text-[20px] font-archivo font-medium mb-4 -mt-14">Value-Added Services
+                    </h3>
+                    <p class="text-textGray">Our value-added services enhance your logistics operations by
+                        offering customized solutions tailored to your unique requirements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="px-6 md:px-12 lg:px-40 py-10">
+    <div class="text-center mb-12">
+        <span class="text-primary text-xl font-manrope font-semibold">Customer Testimonial</span>
+        <h2 class="text-4xl font-manrope font-bold mt-4">Our Partner & Customer Give <br>The Best Review For Us
+        </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-light border-t-4 border-primary p-6">
+            <div class="flex mb-5">
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+            </div>
+
+            <p class="text-textGray mb-5">Lorem ipsum dolor sit amet consectetur. Pretium malesuada pulvinar sed
+                feugiat sem est nisl pharetra. Facilisis ridiculus amet commodo aliquet a phasellus malesuada.
+                Ac id quam mattis neque. Urna tellus ut maecenas interdum. Euismod egestas scelerisque.</p>
+
+            <div class="flex items-center">
+                <div class="w-[60px] h-[60px] rounded-full overflow-hidden mr-4"><img class="mx-auto"
+                        src="/assets/images/cus1.png" alt="" /></div>
+                <div>
+                    <h4 class="text-2xl font-manrope font-bold text-textGray">Michael Adam</h4>
+                    <p class="text-textGray">Hotel Manager</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-light border-t-4 border-primary p-6">
+            <div class="flex mb-5">
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+            </div>
+
+            <p class="text-textGray mb-5">Lorem ipsum dolor sit amet consectetur. Pretium malesuada pulvinar sed
+                feugiat sem est nisl pharetra. Facilisis ridiculus amet commodo aliquet a phasellus malesuada.
+                Ac id quam mattis neque. Urna tellus ut maecenas interdum. Euismod egestas scelerisque.</p>
+
+            <div class="flex items-center">
+                <div class="w-[60px] h-[60px] rounded-full overflow-hidden mr-4"><img class="mx-auto"
+                        src="/assets/images/cus2.png" alt="" /></div>
+                <div>
+                    <h4 class="text-2xl font-manrope font-bold text-textGray">Wade Warren</h4>
+                    <p class="text-textGray">Marketing Coordinator</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-light border-t-4 border-primary p-6">
+            <div class="flex mb-5">
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+                <div class="w-5 h-5 mr-2"><img class="mx-auto" src="/assets/images/star.svg" alt="" /></div>
+            </div>
+
+            <p class="text-textGray mb-5">Lorem ipsum dolor sit amet consectetur. Pretium malesuada pulvinar sed
+                feugiat sem est nisl pharetra. Facilisis ridiculus amet commodo aliquet a phasellus malesuada.
+                Ac id quam mattis neque. Urna tellus ut maecenas interdum. Euismod egestas scelerisque.</p>
+
+            <div class="flex items-center">
+                <div class="w-[60px] h-[60px] rounded-full overflow-hidden mr-4"><img class="mx-auto"
+                        src="/assets/images/cus3.png" alt="" /></div>
+                <div>
+                    <h4 class="text-2xl font-manrope font-bold text-textGray">Albert Flores</h4>
+                    <p class="text-textGray">President of Sales</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById("inquiry_form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone_number');
+
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const phoneRegex = /^(?:\+91[\-\s]?)?0?[6789]\d{9}$/;
+
+        if (!emailRegex.test(emailInput.value)) {
+            emailInput.setCustomValidity('Please enter a valid email address (e.g., user@example.com).');
+            emailInput.reportValidity(); // Show validation message
+            event.preventDefault(); // Prevent form submission
+            return
+        }
+
+        if (!phoneRegex.test(phoneInput.value)) {
+            phoneInput.setCustomValidity('Please enter a valid phone.');
+            phoneInput.reportValidity(); // Show validation message
+            event.preventDefault(); // Prevent form submission
+        } else {
+            phoneInput.setCustomValidity(''); // Reset error message
+        }
+
+        let formData = {
+            first_name: document.getElementById("first_name").value,
+            last_name: document.getElementById("last_name").value,
+            email: document.getElementById("email").value,
+            phone_number: document.getElementById("phone_number").value,
+            message: document.getElementById("message").value
+        };
+
+        fetch("/api/method/godavari.api.contact.submit_form", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message.message);
+                document.getElementById("inquiry_form").reset();
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Something went wrong!");
+            });
+
+    });
+</script>
+
+{% endblock %}

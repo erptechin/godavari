@@ -1,0 +1,167 @@
+{% extends "templates/layout.html" %}
+
+{% block title %}
+Godavari Logistics - Your Growth Partner
+{% endblock %}
+
+{% block meta_block %}
+<meta name="keywords" content="Godavari Logistics - keywords" />
+<meta name="description" content="Godavari Logistics - description" />
+<meta name="author" content="erptech.in" />
+{% endblock %}
+
+{% block page_content %} {{ _("") }}
+
+
+<!-- Hero Banner Section -->
+<section class="relative w-full h-[400px] bg-contact bg-center bg-no-repeat bg-cover">
+    <!-- Hero Content -->
+    <div class="absolute top-[156px] left-[238px] w-[656px]">
+        <h1 class="text-3xl font-manrope font-extrabold leading-tight tracking-tight">
+            <span class="text-white">Contact</span> <span class="text-primary">Us</span>
+        </h1>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="px-6 md:px-12 lg:px-40 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div>
+            <h2 class="text-xl mb-5">Request a Quote</h2>
+            <form id="inquiry_form" class="space-y-2">
+                <!-- <div>
+                    <div class="relative">
+                        <select
+                            class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray appearance-none">
+                            <option>Find a solution</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div> -->
+
+                <input type="text" placeholder="First name" name="first_name" id="first_name"
+                    class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray" />
+                <input type="text" placeholder="Last name" name="last_name" id="last_name"
+                    class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray" />
+                <input type="email" placeholder="Email" name="email" id="email"
+                    class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray" />
+                <input type="tel" placeholder="Phone number" name="phone_number" id="phone_number"
+                    class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray" />
+
+                <!-- <div class="relative">
+                    <select
+                        class="w-full p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray appearance-none">
+                        <option>Subject</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div> -->
+
+                <div class="relative">
+                    <textarea placeholder="Message" name="message" id="message"
+                        class="w-full h-[153px] p-3 bg-[#fafafa] border border-[#d7d7d7] rounded text-textGray"></textarea>
+                </div>
+
+                <button type="submit" class="ml-auto block bg-primary text-white font-bold py-3.5 px-8 rounded">Send
+                    Request</button>
+            </form>
+        </div>
+        <div>
+            <h2 class="text-xl">Corporate office</h2>
+
+            <div class="flex items-start space-x-3 mt-5">
+                <img src="/assets/godavari/images/map.png" alt="">
+                <p class="text-gray-700 text-[14px]">
+                    Lorem Ipsum is simply dummy text <br /> of the printing and typesetting industry
+                </p>
+            </div>
+
+            <div class="flex items-start space-x-3 mt-5">
+                <img src="/assets/images/phone.png" alt="">
+                <p class="text-gray-700 text-[14px]">
+                    xxxxxxxxxxxx
+                </p>
+            </div>
+
+            <div class="flex items-start space-x-3 mt-5">
+                <img src="/assets/images/email.png" alt="">
+                <p class="text-gray-700 text-[14px]">
+                    Email
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div>
+        <iframe class="w-[100%] h-[400px]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29936.80259771154!2d85.85766547431643!3d20.29611410000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190bb9bfb6721f%3A0xa0882c766e0b249!2sOmm%20Pride%20Apartment%20%2C%20Andilo%2C%20Balianta.!5e0!3m2!1sen!2sin!4v1742630997107!5m2!1sen!2sin"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <script>
+        document.getElementById("inquiry_form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone_number');
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const phoneRegex = /^(?:\+91[\-\s]?)?0?[6789]\d{9}$/;
+
+            if (!emailRegex.test(emailInput.value)) {
+                emailInput.setCustomValidity('Please enter a valid email address (e.g., user@example.com).');
+                emailInput.reportValidity(); // Show validation message
+                event.preventDefault(); // Prevent form submission
+                return
+            }
+
+            if (!phoneRegex.test(phoneInput.value)) {
+                phoneInput.setCustomValidity('Please enter a valid phone.');
+                phoneInput.reportValidity(); // Show validation message
+                event.preventDefault(); // Prevent form submission
+            } else {
+                phoneInput.setCustomValidity(''); // Reset error message
+            }
+
+            let formData = {
+                first_name: document.getElementById("first_name").value,
+                last_name: document.getElementById("last_name").value,
+                email: document.getElementById("email").value,
+                phone_number: document.getElementById("phone_number").value,
+                message: document.getElementById("message").value
+            };
+
+            fetch("/api/method/godavari.api.contact.submit_form", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message.message);
+                    document.getElementById("inquiry_form").reset();
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Something went wrong!");
+                });
+
+        });
+    </script>
+
+    {% endblock %}

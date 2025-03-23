@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="{{boot.lang}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="frappe">
+
+    {% block meta_block %}
+    {% include "templates/includes/meta_block" %}
+    {% endblock %}
+
+    <title>{% block title %}{{ title | striptags }}{% endblock %}</title>
+
+    {% block favicon %}
+    <link rel="shortcut icon" href="{{ (favicon or " /assets/frappe/images/frappe-favicon.svg") | abs_url }}"
+        type="image/x-icon">
+    {% endblock %}
+
+    {%- block head_include %}
+    {{ head_include or "" }}
+    {% endblock -%}
+
+    {% if boot.lang == "eo" %}
+    <script type="text/javascript">
+        var _jipt = [];
+        _jipt.push(['project', 'frappe']);
+    </script>
+    <script type="text/javascript" src="https://cdn.crowdin.com/jipt/jipt.js"></script>
+    {% endif %}
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+
+
+<body data-scroll-animation="true"
+    frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}"
+    data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {%- endif
+    %} class="font-opensans text-base {{ body_class or ''}}">
+    {% block content %}
+
+    {% macro main_content() %}
+
+    <header class="relative w-full px-6 md:px-12 lg:px-40 py-4 flex justify-between items-center z-10">
+        <div class="logo w-[200px] h-[40px]">
+            <a href="home"><img src="/assets/images/logo.png" alt="" /></a>
+        </div>
+
+        <nav class="hidden lg:flex items-center space-x-8">
+            <a href="home" class="text-primary font-semibold hover:text-primary">Home</a>
+            <a href="abou-us" class="text-dark font-semibold hover:text-primary">About Us</a>
+            <div class="relative group">
+                <a href="services" class="text-dark hover:text-primary font-semibold flex items-center">
+                    Services
+                    <svg class="w-3 h-3 ml-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+            <a href="contact-us" class="text-dark font-semibold hover:text-primary">Contact Us</a>
+            <button class="bg-primary text-white font-bold py-3.5 px-8 rounded">Get Started</button>
+        </nav>
+
+    </header>
+
+    {% block page_container %}
+    <main class="page_main">
+        {%- block page_content -%}{%- endblock -%}
+    </main>
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer Main -->
+        <div class="bg-light py-12">
+            <div class="px-6 md:px-12 lg:px-40 flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0 md:w-1/2">
+                    <div class="w-[212px] h-[51px] mb-6">
+                        <a href="home"><img src="/assets/images/logo.png" alt="" /></a>
+                    </div>
+                    <p class="text-textGray mb-8 max-w-lg">
+                        At Godavari Logistics, we are committed to transforming logistics with reliability and
+                        precision. As a trusted 3PL provider in India, we offer comprehensive supply chain solutions
+                        tailored to businesses of all sizes. From warehousing and inventory control to
+                        transportation and distribution, our services are designed to meet your specific
+                        requirements.
+                    </p>
+                    <button class="bg-primary text-white font-bold py-3.5 px-8 rounded">Get Quote</button>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-textGray mb-4">Services</h3>
+                    <ul class="text-textGray font-semibold space-y-2">
+                        <li><a class="hover:text-primary" href="#">Warehousing and Storage</a></li>
+                        <li><a class="hover:text-primary" href="#">Transportation and Distribution</a></li>
+                        <li><a class="hover:text-primary" href="#">E-Commerce Fulfillment</a></li>
+                        <li><a class="hover:text-primary" href="#">Supply Chain Management</a></li>
+                        <li><a class="hover:text-primary" href="#">Freight Forwarding</a></li>
+                        <li><a class="hover:text-primary" href="#">Value-Added Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="bg-primary py-3">
+            <div class="px-6 md:px-12 lg:px-60">
+                <p class="text-white">
+                    Copyright © 2025. All rights reserved
+                    <span class="font-bold">Godavari Warehousing Pvt. Ltd.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    {% endmacro %}
+
+    <div class="max-w-[1920px] mx-auto bg-white overflow-hidden">
+        {{ main_content() }}
+    </div>
+
+    {% endblock %}
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="/assets/js/main.js" type="module" crossorigin></script>
+
+</body>
+
+</html>

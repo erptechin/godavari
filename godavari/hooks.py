@@ -1,5 +1,5 @@
 app_name = "godavari"
-app_title = "godavari"
+app_title = "Godavari"
 app_publisher = "erptech"
 app_description = "godavari"
 app_email = "erptechin@gmail.com"
