@@ -35,17 +35,16 @@ Godavari Logistics - Your Growth Partner
 
         {%- for row in services -%}
         <div class="flex items-start space-x-3 bg-white mt-5 p-4">
-            <img class="mx-auto" src="{{ row.image }}" alt="" />
-            <div>
+            {% if loop.index is odd %}
+            <img src="{{ row.image }}" alt="" />
+            {% endif %}
+            <div class="w-90">
                 <h3 class="text-primary text-[20px] font-archivo font-medium mb-4">{{ row.title }}</h3>
-                <p class="text-textGray pb-3">{{ row.description }}</p>
-                <p class="text-textGray">CCTV cameras are strategically placed throughout the warehouse,
-                    covering both interior and exterior areas. These cameras are monitored 24/7 to detect any
-                    unusual activity and provide real-time evidence in case of a security breach. Motion sensors
-                    and alarms are installed to alert security teams to any unauthorized movement or breach of
-                    designated zones. Reinforced walls, gates, and fences are often used around the perimeter of
-                    the warehouse to deter intruders.</p>
+                {{ row.description }}
             </div>
+            {% if loop.index is even %}
+            <img src="{{ row.image }}" alt="" />
+            {% endif %}
         </div>
         {%- endfor -%}
 
