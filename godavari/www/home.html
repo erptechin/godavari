@@ -366,13 +366,13 @@ Godavari Logistics - Your Growth Partner
             return
         }
 
-        if (!phoneRegex.test(phoneInput.value)) {
-            phoneInput.setCustomValidity('Please enter a valid phone.');
-            phoneInput.reportValidity(); // Show validation message
-            event.preventDefault(); // Prevent form submission
-        } else {
-            phoneInput.setCustomValidity(''); // Reset error message
-        }
+        // if (!phoneRegex.test(phoneInput.value)) {
+        //     phoneInput.setCustomValidity('Please enter a valid phone.');
+        //     phoneInput.reportValidity(); // Show validation message
+        //     event.preventDefault(); // Prevent form submission
+        // } else {
+        //     phoneInput.setCustomValidity(''); // Reset error message
+        // }
 
         let formData = {
             first_name: document.getElementById("first_name").value,
